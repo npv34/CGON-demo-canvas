@@ -7,14 +7,18 @@
 <body>
 <canvas id="my-canvas" width="300" height="200" style="border: 1px solid black"></canvas>
 <script src="Circle.js"></script>
+<script src="Rectangle.js"></script>
 <script>
     let circle = new Circle(20, 70, 70);
     circle.init();
-    setInterval(autoMove, 1000)
+    let rect = new Rectangle(100, 180, 50, 10);
+    rect.draw();
+    // rect.setInterval(autoMove, 1000)
+    //
+    // function autoMove() {
+    //
+    // }
 
-    function autoMove() {
-
-    }
     // window.addEventListener('keyup', function (event) {
     //     console.log(event)
     //     switch (event.keyCode) {
