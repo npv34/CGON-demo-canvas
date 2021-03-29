@@ -8,31 +8,25 @@
 <canvas id="my-canvas" width="300" height="200" style="border: 1px solid black"></canvas>
 <script src="Circle.js"></script>
 <script src="Rectangle.js"></script>
+<script src="GameBoard.js"></script>
+
 <script>
-    let circle = new Circle(20, 70, 70);
-    circle.init();
-    let rect = new Rectangle(100, 180, 50, 10);
-    rect.draw();
+    let game = new GameBoard();
+    function play() {
+        game.init();
+    }
+    play();
+
+
     // rect.setInterval(autoMove, 1000)
     //
     // function autoMove() {
     //
     // }
 
-    // window.addEventListener('keyup', function (event) {
-    //     console.log(event)
-    //     switch (event.keyCode) {
-    //         case 37:
-    //             circle.moveLeft();
-    //             circle.update();
-    //             break;
-    //         case 39:
-    //             circle.moveRight();
-    //             break;
-    //
-    //     }
-    //     circle.update();
-    // })
+    window.addEventListener('keyup', function (event) {
+        game.moveRect(event.keyCode)
+    })
 </script>
 </body>
 </html>
